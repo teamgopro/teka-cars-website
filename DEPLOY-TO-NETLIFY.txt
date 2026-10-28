@@ -1,0 +1,28 @@
+TEKA CARS — FREE DEPLOYMENT
+
+This project is a React + Vite website. Netlify must build it before it can be published, so this ZIP is a source package (not the prebuilt dist folder).
+
+RECOMMENDED METHOD (free): GitHub + Netlify
+
+1. Extract this ZIP on your computer.
+2. Go to https://github.com/new and create a repository named teka-cars-website. A public repository is simplest for this workflow. Do not initialize it with a README if you are uploading these existing files.
+3. On the new repository page, choose the option to upload existing files. Upload the CONTENTS of this extracted folder (including package.json, package-lock.json, src, public, vite.config.ts, and netlify.toml). Do not upload node_modules or dist if they exist.
+4. Commit the uploaded files.
+5. Go to https://app.netlify.com/ and sign up/log in.
+6. Choose Add new site / Import an existing project, then connect GitHub and select teka-cars-website.
+7. Netlify should detect netlify.toml. Confirm these settings if asked:
+   Build command: npm run build
+   Publish directory: dist
+8. Click Deploy. Wait for the build to finish; Netlify will provide a public *.netlify.app URL.
+
+LOCAL TEST (optional)
+Install Node.js LTS from https://nodejs.org/.
+Open a terminal in this folder and run:
+  npm ci
+  npm run build
+The generated website will be in the dist folder. That dist folder can be dragged to https://app.netlify.com/drop for a manual deploy.
+
+NOTES
+- The site uses hash-based navigation, so its page links should work without extra rewrite rules.
+- The contact and invitation forms may still need a form backend/service before they can actually deliver submissions. Publishing alone does not guarantee emails are sent.
+- Never upload API keys, passwords, or private environment files to a public repository.
